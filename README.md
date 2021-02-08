@@ -16,13 +16,19 @@ cp .env.example .env
 
 ### Start the service with Docker
 
-Start the project with Docker:
+Start the service:
 
 ```
 make dev
 ```
 
 The API should be available at `http://localhost:9020`
+
+To rebuild containers, following option can be used:
+
+```
+make dev arg=--build
+```
 
 ### Start the service manually
 
