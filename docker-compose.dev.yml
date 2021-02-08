@@ -9,7 +9,7 @@ services:
     networks:
       - shared
     ports:
-      - "8090:8090"
+      - "9020:9020"
     volumes:
       - ./:/app
     env_file:
