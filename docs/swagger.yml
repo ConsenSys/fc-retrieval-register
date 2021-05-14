@@ -223,6 +223,9 @@ definitions:
       regionCode:
         type: string
         description: Region Code.
+      groupCIDOfferSupported:
+        type: boolean
+        description: Indicates whether the gateway is supporting offers for grouped content (multiple CIDs)
 
   ProviderRegister:
     type: object
