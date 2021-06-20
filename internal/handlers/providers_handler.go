@@ -30,7 +30,7 @@ func AddProviderRegister(params op.AddProviderRegisterParams) middleware.Respond
 		panic(err)
 	}
 
-	log.Info("Register created a provider with ID: %s", params.Register.NodeID)
+	log.Info("register created a provider record with ID: %s", params.Register.NodeID)
 
 	// Response
 	return op.NewAddProviderRegisterOK().WithPayload(register)
@@ -113,7 +113,7 @@ func DeleteProviderRegisters(_ op.DeleteProviderRegisterParams) middleware.Respo
 	}
 
 	for index := range registers {
-		log.Info("DELETE %v", index)
+		log.Info("register deleted a provider record with ID: %s", index)
 		err := rdb.HDel(ctx, registerTypeProvider, index).Err()
 		if err != nil {
 			log.Error("Unable to set Redis value")

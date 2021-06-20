@@ -30,7 +30,7 @@ func AddGatewayRegister(params op.AddGatewayRegisterParams) middleware.Responder
 		panic(err)
 	}
 
-	log.Info("Register created a gateway with ID: %s", params.Register.NodeID)
+	log.Info("register created a gateway record with ID: %s", params.Register.NodeID)
 
 	// Response
 	return op.NewAddGatewayRegisterOK().WithPayload(register)
@@ -112,7 +112,7 @@ func DeleteGatewayRegisters(_ op.DeleteGatewayRegisterParams) middleware.Respond
 	}
 
 	for index := range registers {
-		log.Info("DELETE %v", index)
+		log.Info("register deleted a gateway record with ID: %s", index)
 		err := rdb.HDel(ctx, registerTypeGateway, index).Err()
 		if err != nil {
 			log.Error("Unable to set Redis value")
