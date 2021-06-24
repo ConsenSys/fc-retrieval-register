@@ -84,8 +84,8 @@ curl --location --request POST 'http://localhost:9020/registers/gateway' \
     "networkInfoGateway": "127.0.0.1:9012",
     "networkInfoAdmin": "127.0.0.1:9013",
     "regionCode": "US",
-    "rootSigningKey": "0xABCDE123456789",
-    "signingKey": "0x987654321EDCBA"
+    "rootSigningKey": "01047799f37b014564e23578447d718e5c70a786b0e4e58ca25cb2a086b822434594d910b9b8c0fcbfe9f4c2db321e874819e0614be5b57fbb5080accd69adb2eaad",
+    "signingKey": "01047799f37b014564e23578447d718e5c70a786b0e4e58ca25cb2a086b822434594d910b9b8c0fcbfe9f4c2db321e874819e0614be5b57fbb5080accd69adb2eaad"
 }'
 ```
 
